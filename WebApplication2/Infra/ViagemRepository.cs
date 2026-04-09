@@ -34,7 +34,6 @@ namespace WebApplication2.Infra
         {
             return await _db.Viagens
                 .AsNoTracking()
-                .Include(x => x.Destinos)
                 .ToListAsync(token);
         }
 

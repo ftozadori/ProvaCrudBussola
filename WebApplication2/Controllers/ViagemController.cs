@@ -51,8 +51,8 @@ namespace WebApplication2.Controllers
             [FromRoute] Guid id,
             CancellationToken token = default)
         {
-            var computador = await _service.GetById(id, token);
-            return Ok(computador);
+            var viagem = await _service.GetById(id, token);
+            return Ok(viagem);
         }
 
         [HttpDelete("{id}")]

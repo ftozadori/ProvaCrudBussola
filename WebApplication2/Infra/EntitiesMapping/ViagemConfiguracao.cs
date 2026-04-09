@@ -13,7 +13,8 @@ namespace WebApplication2.Infra.EntitiesMapping
 
             builder.HasMany(x => x.Destinos)
                 .WithOne(x => x.Viagem)
-                .HasForeignKey(x => x.ViagemId);
+                .HasForeignKey(x => x.ViagemId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
